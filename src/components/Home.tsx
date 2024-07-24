@@ -1,7 +1,10 @@
+import { Container } from "@mui/material";
+import Footer from "./Footer";
+
 export default function Home() {
   return (
-    <>
-      <h1>Home</h1>
-    </>
+    <Container disableGutters maxWidth={false} sx={{ padding: 0 }}>
+      <Footer />
+    </Container>
   );
 }

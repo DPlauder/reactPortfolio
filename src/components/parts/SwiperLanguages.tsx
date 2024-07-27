@@ -23,12 +23,13 @@ export default function SwiperLanguages() {
   return (
     <Swiper
       spaceBetween={50}
-      slidesPerView={4}
+      slidesPerView={5}
       loop={true}
       autoplay={{
-        delay: 150,
+        delay: 100,
         disableOnInteraction: false,
       }}
+      speed={400}
       modules={[Autoplay]}
     >
       <SwiperSlide>

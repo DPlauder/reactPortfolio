@@ -10,10 +10,16 @@ export default function Info() {
         PLAUDER
       </Typography>
       <Typography variant="h3" align="center">
-        APPLICATION
+        FULL STACK
       </Typography>
       <Typography variant="h3" align="center">
         DEVELOPER
+      </Typography>
+      <Typography align="center">
+        With a focus on
+        <span style={{ color: "orange" }}>REACT</span>,{" "}
+        <span style={{ color: "violet" }}>.NET</span> and{" "}
+        <span style={{ color: "green" }}>PHP</span>
       </Typography>
     </Container>
   );

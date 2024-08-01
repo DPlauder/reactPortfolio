@@ -2,7 +2,7 @@ import { Container, Typography } from "@mui/material";
 
 export default function Info() {
   return (
-    <Container sx={{ color: "white", paddingTop: "200px" }}>
+    <Container sx={{ color: "white" }}>
       <Typography variant="h1" align="center">
         DOMINIK
       </Typography>

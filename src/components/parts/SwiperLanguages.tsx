@@ -73,3 +73,5 @@ export default function SwiperLanguages() {
     </div>
   );
 }
+
+//TODO react-scroll ausprobieren

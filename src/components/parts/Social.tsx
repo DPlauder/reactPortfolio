@@ -3,9 +3,16 @@ import { Container, Fab } from "@mui/material";
 export default function Social() {
   return (
     <Container>
-      <Fab color="primary">Gmail</Fab>
-      <Fab color="primary">Github</Fab>
-      <Fab color="primary">LinkedIn</Fab>
+      <ul style={{ listStyle: "none", padding: "0px" }}>
+        <li>
+          <Fab color="primary">Gmail</Fab>
+        </li>
+        <li></li>
+        <Fab color="primary">Github</Fab>
+        <li>
+          <Fab color="primary">LinkedIn</Fab>
+        </li>
+      </ul>
     </Container>
   );
 }

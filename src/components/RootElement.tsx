@@ -31,13 +31,6 @@ export default function RootElement() {
           </NavLink>
         </Grid>
         <Grid item xs={2}>
-          <Link to="/projects">
-            <Button>
-              <Typography color={"white"}>My Projects</Typography>
-            </Button>
-          </Link>
-        </Grid>
-        <Grid item xs={2}>
           <NavLink to="/about">
             <Button>
               <Typography color={"white"}> About Me</Typography>
@@ -45,11 +38,11 @@ export default function RootElement() {
           </NavLink>
         </Grid>
         <Grid item xs={2}>
-          <NavLink to="/contact">
+          <Link to="/projects">
             <Button>
-              <Typography color={"white"}>Contact Me</Typography>
+              <Typography color={"white"}>My Projects</Typography>
             </Button>
-          </NavLink>
+          </Link>
         </Grid>
       </Grid>
       <div id="content" style={{ background: "#262626" }}>

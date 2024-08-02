@@ -7,13 +7,16 @@ import {
   FaGithub,
   FaNpm,
   FaPhp,
+  FaHtml5,
+  FaCss3Alt,
 } from "react-icons/fa";
 import {
   SiTypescript,
   SiDotnet,
   SiMysql,
+  SiCsharp,
+  SiMariadb,
   SiMongodb,
-  SiPostgresql,
 } from "react-icons/si";
 
 const items = [
@@ -21,13 +24,16 @@ const items = [
   <SiTypescript size={100} color="#3178C6" />,
   <FaJsSquare size={100} color="#F7DF1E" />,
   <SiDotnet size={100} color="#512BD4" />,
+  <FaCss3Alt size={100} color="#1572B6" />,
   <FaGit size={100} color="#F05032" />,
-  <FaGithub size={100} color="#181717" />,
+  <FaGithub size={100} color="#6e5494" />,
   <FaNpm size={100} color="#CB3837" />,
   <FaPhp size={100} color="#777BB4" />,
   <SiMysql size={100} color="#4479A1" />,
+  <SiCsharp size={100} color="#239120" />,
+  <SiMariadb size={100} color="#4E90A4" />,
   <SiMongodb size={100} color="#47A248" />,
-  <SiPostgresql size={100} color="#336791" />,
+  <FaHtml5 size={100} color="#E34F26" />,
 ];
 
 const ScrollLanguages: React.FC = () => {

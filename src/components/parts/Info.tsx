@@ -15,9 +15,8 @@ export default function Info() {
       <Typography variant="h3" align="center">
         DEVELOPER
       </Typography>
-      <Typography align="center">
-        With a focus on
-        <span style={{ color: "orange" }}>REACT</span>,{" "}
+      <Typography align="center" mt={"10px"}>
+        With a focus on <span style={{ color: "orange" }}>REACT</span>,{" "}
         <span style={{ color: "violet" }}>.NET</span> and{" "}
         <span style={{ color: "green" }}>PHP</span>
       </Typography>

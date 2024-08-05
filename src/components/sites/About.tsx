@@ -2,7 +2,19 @@ import { Container, Card, CardContent, Typography } from "@mui/material";
 
 export default function About() {
   return (
-    <Container>
+    <Container
+      disableGutters
+      maxWidth="sm"
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 0,
+        gap: "100px",
+        height: "calc(100vh - 200px)",
+      }}
+    >
       <Card sx={{ minWidth: 275, background: "white" }}>
         <CardContent>
           <Typography variant="h4">Hi. I'm Dominik,</Typography>

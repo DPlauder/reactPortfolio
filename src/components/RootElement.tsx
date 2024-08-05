@@ -9,10 +9,11 @@ export default function RootElement() {
       disableGutters
       maxWidth={false}
       sx={{
+        display: "flex",
+        flexDirection: "column",
         padding: "0px",
-        minHeight: "100vh",
+        height: "100vh",
         backgroundColor: "#262626",
-        position: "relative",
       }}
     >
       <Grid
@@ -23,6 +24,7 @@ export default function RootElement() {
         borderBottom={1}
         borderColor={"red"}
         alignItems="center"
+        height={"100px"}
       >
         <Grid item xs={4}>
           <Typography variant="h4" color={"white"}>
@@ -51,13 +53,7 @@ export default function RootElement() {
           </Link>
         </Grid>
       </Grid>
-      <Box
-        sx={{
-          display: "flex",
-          minHeight: "calc(100vh - 100px)",
-          alignItems: "center",
-        }}
-      >
+      <Box>
         <Box
           sx={{
             display: "flex",
@@ -69,18 +65,23 @@ export default function RootElement() {
         <Box
           sx={{
             flexGrow: 1,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
             width: "100%",
           }}
         >
-          <Box sx={{ width: "100%", maxWidth: "800px", textAlign: "center" }}>
+          <Box
+            sx={{
+              width: "100%",
+              maxWidth: "800px",
+              textAlign: "center",
+            }}
+          >
             <Outlet />
           </Box>
         </Box>
       </Box>
-      <Footer />
+      <Box>
+        <Footer />
+      </Box>
     </Container>
   );
 }

@@ -1,13 +1,23 @@
 import { Container } from "@mui/material";
 import Info from "../parts/Info";
-import SwiperLanguages from "../parts/SwiperLanguages";
 import ScrollLanguages from "../parts/ScollerLanguages";
 
 export default function Home() {
   return (
-    <Container disableGutters maxWidth="sm" sx={{ padding: 0 }}>
+    <Container
+      disableGutters
+      maxWidth="sm"
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 0,
+        gap: "100px",
+        height: "calc(100vh - 200px)",
+      }}
+    >
       <Info />
-      <SwiperLanguages />
       <ScrollLanguages />
     </Container>
   );

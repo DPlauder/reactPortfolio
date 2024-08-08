@@ -15,6 +15,7 @@ export default function Home() {
         padding: 0,
         gap: "100px",
         height: "calc(100vh - 200px)",
+        width: "100%",
       }}
     >
       <Info />

@@ -1,4 +1,4 @@
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, Box } from "@mui/material";
 
 export default function Footer() {
   return (
@@ -9,24 +9,39 @@ export default function Footer() {
         left: 0,
         right: 0,
         width: "100%",
-
-        backgroundColor: "#262626",
+        backgroundColor: "#333",
         color: "white",
+        boxShadow: "0px -4px 20px rgba(255, 0, 0, 0.5)",
+        padding: "20px 0",
       }}
     >
       <Container
         sx={{
           display: "flex",
-          alignItems: "end",
-          justifyContent: "center",
-          width: "100%",
-          height: "100px",
-          border: "1px, solid, red",
-          borderRadius: "10px",
-          padding: "10px",
+          justifyContent: "space-between",
+          alignItems: "center",
+          maxWidth: "1200px",
+          margin: "0 auto",
+          padding: "0 20px",
         }}
       >
-        <Typography variant="body1" color={"white"}>
+        <Box>
+          <ul
+            style={{
+              listStyle: "none",
+              padding: 0,
+              margin: 0,
+              display: "flex",
+              gap: "20px",
+              fontWeight: "bold",
+            }}
+          >
+            <li style={{ cursor: "pointer" }}>Home</li>
+            <li style={{ cursor: "pointer" }}>About Me</li>
+            <li style={{ cursor: "pointer" }}>Projects</li>
+          </ul>
+        </Box>
+        <Typography variant="body1" color="white" sx={{ fontSize: "14px" }}>
           © 2024 Dominik Plauder. All rights reserved.
         </Typography>
       </Container>

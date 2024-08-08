@@ -1,4 +1,4 @@
-import { Container, Fab } from "@mui/material";
+import { Container, Fab, Box } from "@mui/material";
 import GmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
@@ -6,29 +6,65 @@ export default function Social() {
   return (
     <Container
       sx={{
-        border: "1px, solid, gray",
-        borderRadius: "10px",
         position: "fixed",
-        left: -5,
+        left: 10,
         top: 350,
-        width: "100px",
+        width: "80px",
         display: "flex",
-        justifyContent: "center",
-        padding: "10px",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: 2,
+        backgroundColor: "#333",
+        boxShadow: "0px 4px 20px rgba(255, 0, 0, 0.5)",
+        borderRadius: "12px",
+        padding: "16px",
+        color: "white",
       }}
     >
-      <ul style={{ listStyle: "none", padding: "50px", gap: "100px" }}>
-        <li>
-          <Fab color="primary">
+      <Box sx={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+        <Fab
+          color="primary"
+          sx={{
+            backgroundColor: "red",
+            "&:hover": { backgroundColor: "darkred" },
+          }}
+        >
+          <a
+            href="mailto:dominik.plauder@gmail.com"
+            style={{
+              textDecoration: "none",
+              color: "white",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
             <GmailIcon />
-          </Fab>
-        </li>
-        <li>
-          <Fab color="primary">
+          </a>
+        </Fab>
+        <Fab
+          color="primary"
+          sx={{
+            backgroundColor: "#333",
+            "&:hover": { backgroundColor: "gray" },
+          }}
+        >
+          <a
+            href="https://github.com/DPlauder"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              textDecoration: "none",
+              color: "white",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
             <GitHubIcon />
-          </Fab>
-        </li>
-      </ul>
+          </a>
+        </Fab>
+      </Box>
     </Container>
   );
 }

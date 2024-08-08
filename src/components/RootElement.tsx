@@ -11,53 +11,74 @@ export default function RootElement() {
       sx={{
         display: "flex",
         flexDirection: "column",
-        padding: "0px",
-        height: "100vh",
+        minHeight: "100vh",
         backgroundColor: "#262626",
       }}
     >
+      {/* Header with Navigation */}
       <Grid
         container
         spacing={2}
         padding={2}
-        position={"sticky"}
-        borderBottom={1}
-        borderColor={"red"}
-        alignItems="center"
-        height={"100px"}
+        sx={{
+          position: "sticky",
+          top: 0,
+          zIndex: 1000,
+          borderBottom: "1px solid red",
+          backgroundColor: "#333",
+          boxShadow: "0px 4px 10px rgba(255, 0, 0, 0.3)",
+          alignItems: "center",
+          height: "100px",
+        }}
       >
         <Grid item xs={4}>
-          <Typography variant="h4" color={"white"}>
+          <Typography variant="h3" color={"white"} sx={{ fontWeight: "bold" }}>
             Dominik Plauder
           </Typography>
         </Grid>
-        <Grid item xs={2}>
-          <NavLink to="/">
+        <Grid
+          item
+          xs={8}
+          pr={"100px"}
+          sx={{
+            display: "flex",
+            justifyContent: "flex-end",
+            alignItems: "center",
+            gap: "20px",
+          }}
+        >
+          <NavLink to="/" style={{ textDecoration: "none" }}>
             <Button>
-              <Typography color={"white"}>Home</Typography>
+              <Typography variant="h5" color={"white"}>
+                Home
+              </Typography>
             </Button>
           </NavLink>
-        </Grid>
-        <Grid item xs={2}>
-          <NavLink to="/about">
+          <NavLink to="/about" style={{ textDecoration: "none" }}>
             <Button>
-              <Typography color={"white"}>About Me</Typography>
+              <Typography variant="h5" color={"white"}>
+                About Me
+              </Typography>
             </Button>
           </NavLink>
-        </Grid>
-        <Grid item xs={2}>
-          <Link to="/projects">
+          <Link to="/projects" style={{ textDecoration: "none" }}>
             <Button>
-              <Typography color={"white"}>My Projects</Typography>
+              <Typography variant="h5" color={"white"}>
+                My Projects
+              </Typography>
             </Button>
           </Link>
         </Grid>
       </Grid>
-      <Box>
+
+      {/* Main Content with Social Links and Outlet */}
+      <Box sx={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
         <Box
           sx={{
             display: "flex",
-            justifyContent: "left",
+            justifyContent: "flex-start",
+            paddingTop: "20px",
+            paddingLeft: "20px",
           }}
         >
           <Social />
@@ -66,19 +87,15 @@ export default function RootElement() {
           sx={{
             flexGrow: 1,
             width: "100%",
+            textAlign: "center",
+            padding: "20px",
           }}
         >
-          <Box
-            sx={{
-              width: "100%",
-              maxWidth: "800px",
-              textAlign: "center",
-            }}
-          >
-            <Outlet />
-          </Box>
+          <Outlet />
         </Box>
       </Box>
+
+      {/* Footer */}
       <Box>
         <Footer />
       </Box>
